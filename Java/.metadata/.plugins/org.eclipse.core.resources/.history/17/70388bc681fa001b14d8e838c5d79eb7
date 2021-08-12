@@ -1,0 +1,13 @@
+package com.avensys.spring;
+
+public class MyApp {
+
+    public static void main(String[] args) {
+//        JavaTrainer jt = new JavaTrainer();
+//        new ClassPathXmlApplicationContext
+//        System.out.println(jt.giveTraining());
+//
+//        SQLTrainer st = new SQLTrainer();
+//        System.out.println(st.giveTraining());
+    }
+}

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration Successful</title>
+</head>
+<body style="background-color:grey">
+Congratulations, your account has been registered.<br>
+Click <a href="login.html">here</a> to log in.
+</body>
+</html>

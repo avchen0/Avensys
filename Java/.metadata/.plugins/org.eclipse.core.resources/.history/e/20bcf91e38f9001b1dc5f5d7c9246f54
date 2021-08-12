@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Deposit</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<form action="Deposit">
+	<table>
+		<tr>
+			<td>Amount to deposit</td><td><input type="number" name="deposit" min = "0"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Deposit"></td>
+		</tr>
+	</table>
+</form>
+<br><br>Click <a href="changePwd.html">here</a> to change your password.
+<br><br>Click <a href="checkBalance.jsp">here</a> to check your balance.
+<br><br>Click <a href="LogOut">here</a> to log out.
+<br><br>Click <a href="transfer.html">here</a> to transfer money to another account.
+<br><br>Click <a href="withdraw.html">here</a> to withdraw money.
+<br><br>Click <a href="home.jsp">here</a> to return to the home page.
+</body>
+</html>

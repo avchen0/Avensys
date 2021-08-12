@@ -1,0 +1,5 @@
+package com.controller;
+public class Credentials {
+	static String email="namethisnow@gmail.com";
+	static String pwd="LeBron23";
+}

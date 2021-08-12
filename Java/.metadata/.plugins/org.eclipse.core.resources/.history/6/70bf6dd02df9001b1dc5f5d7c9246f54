@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="../css/loginstyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<body>
+An error occurred.<br>
+Click <a href="changePwd.html">here</a> to try again. 
+Click <a href="home.jsp">here</a> to return to the homepage.
+</body>
+</body>
+</html>

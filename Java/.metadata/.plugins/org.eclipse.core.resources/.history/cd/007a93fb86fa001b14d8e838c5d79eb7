@@ -1,0 +1,13 @@
+package com.injection;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.avensys.spring.Trainer;
+
+public class MyAppOne {
+	public static void main(String args[]) {
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appContext.xml");
+        Trainer jt = context.getBean("e1", Trainer.class);
+        System.out.println(jt.giveTraining());
+	}
+}

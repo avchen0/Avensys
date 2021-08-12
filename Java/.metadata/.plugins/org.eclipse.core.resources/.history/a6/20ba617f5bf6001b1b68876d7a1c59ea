@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Error</title>
+</head>
+<body style="background-color:grey;">
+Password & Confirm Password doesn't match.<br>
+Click <a href="register.html">here</a> to register again.
+</body>
+</html>

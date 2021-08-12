@@ -1,0 +1,18 @@
+package com.avensys.spring;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MyApp {
+
+    public static void main(String[] args) {   	
+        JavaTrainer jt = new JavaTrainer();
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appContext.xml");
+        Trainer jt = context.getBean("javaTrainer", Trainer.class);
+        System.out.println(jt.giveTraining());
+
+        SQLTrainer st = new SQLTrainer();
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appContext.xml");
+        Trainer jt = context.getBean("sqlTrainer", Trainer.class);
+        System.out.println(st.giveTraining());
+    }
+}

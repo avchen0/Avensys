@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Define your beans here -->
+    
+    <!-- define the dependency -->
+    <bean id="javaTrainer" class="com.avensys.spring.JavaTrainer"></bean>
+	<bean id="sqlTrainer" class="com.avensys.spring.SQLTrainer"></bean>
+	
+	<!-- Constructor Injection -->
+	<bean id="employee" class="com.injection.constructor.Employee">
+		<!-- constructor-arg elements must be listed in the same order 
+		as the order of arguments supplied to the Employee Constructo r-->
+		<constructor-arg value="1" type="int"></constructor-arg>
+		<constructor-arg value="Akhil"></constructor-arg>
+	</bean>
+	
+	<!-- Setter Injection 
+		Note that if we specify to Spring that we want it to create a bean via
+		Setter Injection, in our class, (in this case com.injection.setter.Worker),
+		we cannot have a Constructor because if we have a Constructor then Spring
+		will try to instantiate a bean via Constructor Injection and so it will
+		look for the xml configuration for Constructor Injection (i.e. the
+		constructor-arg tags). So a constructor was not defined in the Worker class.
+	-->
+	<bean id="worker" class="com.injection.setter.Worker">
+		<!--constructor-arg elements must be listed in the same order 
+		as the order of arguments supplied to the Employee Constructor-->
+		<property name="id"> <value>1</value> </property>
+		<property name="name"> <value>Akhil</value> </property>
+	</bean>
+</beans>

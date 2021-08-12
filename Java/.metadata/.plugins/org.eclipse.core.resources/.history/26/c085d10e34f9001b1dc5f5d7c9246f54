@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Transfer</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<form action="Transfer">
+	<table>
+		<tr>
+			<td>Amount to transfer</td><td><input type="number" name="transfer" min = "0"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Transfer"></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

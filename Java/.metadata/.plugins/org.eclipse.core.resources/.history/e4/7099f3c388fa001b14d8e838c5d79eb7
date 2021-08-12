@@ -1,0 +1,9 @@
+package com.injection.constructor;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.avensys.spring.Trainer;
+
+public class MyAppOne {
+	
+}

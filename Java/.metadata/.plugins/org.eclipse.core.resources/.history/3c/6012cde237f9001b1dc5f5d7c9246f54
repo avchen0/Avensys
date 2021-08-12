@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Deposit</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<form action="Deposit">
+	<table>
+		<tr>
+			<td>Amount to deposit</td><td><input type="number" name="deposit" min = "0"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Deposit"></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

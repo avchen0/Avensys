@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Define your beans here -->
+    
+    <!-- define the dependency -->
+    <bean id="javaTrainer" class="com.avensys.spring.JavaTrainer"></bean>
+	<bean id="sqlTrainer" class="com.avensys.spring.SQLTrainer"></bean>
+	<bean id="employee" class="com.injection.constructor.Employee">
+		<!--constructor-arg elements must be listed in the same order 
+		as the order of arguments supplied to the Employee Constructor-->
+		<constructor-arg value="1" type="int"></constructor-arg>
+		<constructor-arg value="Akhil"></constructor-arg>
+	</bean>
+	<bean id="worker" class="com.injection.setter.Worker">
+		<!--constructor-arg elements must be listed in the same order 
+		as the order of arguments supplied to the Employee Constructor-->
+		<property name="id"> <value>1</value> </property>
+		<property name="name"> <value>Akhil</value> </property>
+	</bean>
+</beans>

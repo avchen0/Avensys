@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+Passwords do not match.<br>
+Click <a href="changePwd.html">here</a> to try again. 
+Click <a href="home.jsp">here</a> to return to the homepage.
+</body>
+</html>

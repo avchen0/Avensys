@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body style="background-color:grey">
+Invalid Credentials.<br>
+Click <a href="login.html">here</a> to log in again. 
+Click <a href="register.html">here</a> to register.
+</body>
+</html>

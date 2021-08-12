@@ -1,0 +1,16 @@
+package com.injection.constructor;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.avensys.spring.Trainer;
+import com.injection.constructor.Employee;
+
+public class MyAppOne {
+	public static void main(String args[]) {
+		// Constructor Injection
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appContext.xml");
+        // Employee e1 = new Employee(1, "Akhil");
+        Employee employee = (Employee) context.getBean("employee");
+		employee.disp();;
+	}
+}

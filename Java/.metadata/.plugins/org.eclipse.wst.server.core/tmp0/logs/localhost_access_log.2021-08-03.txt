@@ -1,0 +1,6 @@
+127.0.0.1 - - [03/Aug/2021:16:24:34 +0800] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [03/Aug/2021:16:24:36 +0800] "GET /FirstProgram/ HTTP/1.1" 404 1091
+0:0:0:0:0:0:0:1 - - [03/Aug/2021:16:28:37 +0800] "GET /FirstProgram/hello.html HTTP/1.1" 200 149
+0:0:0:0:0:0:0:1 - - [03/Aug/2021:16:28:38 +0800] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [03/Aug/2021:16:29:54 +0800] "GET /FirstProgram/src/main/webapp/hello.html HTTP/1.1" 404 1129
+0:0:0:0:0:0:0:1 - - [03/Aug/2021:16:30:13 +0800] "GET /FirstProgram/hello.html HTTP/1.1" 304 -

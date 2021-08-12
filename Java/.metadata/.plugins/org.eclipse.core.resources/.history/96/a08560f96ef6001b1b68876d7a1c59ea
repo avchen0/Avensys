@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Error Occurred</title>
+</head>
+<body style="background-color:grey">
+An error occurred during registration. Click <a href="register.html">here</a> to register again.
+</body>
+</html>

@@ -1,0 +1,15 @@
+package com.injection.setter;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.injection.constructor.Employee;
+
+public class MyAppTwo {
+	public static void main(String args[]) {
+		// Constructor Injection
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appContext.xml");
+        // Employee e1 = new Employee(1, "Akhil");
+        Employee e1 = (Employee) context.getBean("empSetterInj");
+		e1.disp();;
+	}
+}

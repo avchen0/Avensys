@@ -1,0 +1,18 @@
+package com.hib.practice;
+
+public class StudentApp {
+	public static void main(String args[]) {
+//		Student s = new Student();
+//		s.setId(1);
+//		s.setName("Akhil");
+//		HibernateManager hm = new HibernateManager();
+//		hm.connect();
+//		//hm.insert(s);
+//		hm.selectSpecific(1);
+		
+		Address a = new Address();
+		a.setId(1);
+		a.setZipCode(100);
+		a.setCountry("SG");
+	}
+}

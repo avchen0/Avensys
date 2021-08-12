@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="ChangePwd">
+	<table>
+		<tr>
+			<td>Password</td><td><input type="text" name="pwd"></td>
+		</tr>
+		<tr>
+			<td>New Password</td><td><input type="password" name="newpwd"></td>
+		</tr>
+		<tr>
+			<td>Confirm New Password</td><td><input type="password" name="cnewpwd"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Log in"></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

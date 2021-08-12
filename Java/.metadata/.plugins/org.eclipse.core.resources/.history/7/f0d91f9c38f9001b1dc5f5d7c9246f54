@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Withdraw</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<form action="Withdraw">
+	<table>
+		<tr>
+			<td>Amount to withdraw</td><td><input type="number" name="withdraw" min = "0"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Withdraw"></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

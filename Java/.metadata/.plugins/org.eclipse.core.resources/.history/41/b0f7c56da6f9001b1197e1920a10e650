@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log in</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<form action="Login">
+	<table>
+		<tr>
+			<td>Email</td><td><input type="text" name="email"></td>
+		</tr>
+		<tr>
+			<td>Password</td><td><input type="password" name="pwd"></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Log in"></td>
+		</tr>
+	</table>
+</form>
+Forgot Password? Click<a href="forgotPwd.html">here</a><br>
+</body>
+</html>

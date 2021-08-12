@@ -1,0 +1,15 @@
+package com.injection.constructor;
+
+public class Employee {
+	private int id;
+	private String name;
+	
+	public Employee(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+	
+	public void disp() {
+		System.out.println(id + " " + name);
+	}
+}

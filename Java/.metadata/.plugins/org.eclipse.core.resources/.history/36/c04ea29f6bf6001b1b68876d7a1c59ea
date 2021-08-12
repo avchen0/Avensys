@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>First Servlet Program</title>
+<style type="text/css" media="screen">body {
+  background-image: 'C:\Users\User\_Avensys\Web\pexels-cottonbro-4327024.jpg';
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}</style>
+</head>
+<body>
+<!-- 
+<p>Servlet test</p>
+form action="Intro">
+	<table>
+		<tr>
+			<td>Name</td><input type="text" name="name"><td>
+		</tr>
+		<tr>
+			<td></td><input type="submit" value="SUBMIT"><td>
+		</tr>
+	</table>
+</form>
+
+-->
+<!-- 
+<form action="Insert">
+	<table>
+		<tr>
+			<td>Name</td><input type="text" name="name"><td>
+		</tr>
+	</table>
+		<table>
+		<tr>
+			<td>Email</td><input type="text" name="email"><td>
+		</tr>
+	</table>
+		<table>
+		<tr>
+			<td>Role</td><input type="text" name="role"><td>
+		</tr>
+		<tr>
+			<td></td><input type="submit" value="SUBMIT"><td>
+		</tr>
+	</table>
+</form>
+ -->
+<!-- 
+<form action="/FirstProgram/FetchDataMVCServlet">
+	<table>
+		<tr>
+			<td>Name</td><input type="text" name="name"><td>
+		</tr>
+		<tr>
+			<td></td><input type="submit" value="SUBMIT"><td>
+		</tr>
+	</table>
+</form>
+
+ -->
+Is it your first time? <a href="register.html">Register here</a><br>
+Already have an account? <a href="login.html">Log in here</a><br>
+</body>
+</html>
