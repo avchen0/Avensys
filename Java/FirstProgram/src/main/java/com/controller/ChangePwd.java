@@ -29,8 +29,8 @@ public class ChangePwd extends HttpServlet {
 		if (newpwd.equals(cnewpwd)) {
 			Model m = new Model();
 			HttpSession session = req.getSession(true);
-			String un = (String) session.getAttribute("un");
-			m.setUn(un);
+			String email = (String) session.getAttribute("email");
+			m.setEmail(email);
 			m.setPwd(pwd);
 			m.setNewpwd(newpwd);
 			

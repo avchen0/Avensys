@@ -120,16 +120,26 @@ public class Model {
 	
 	public int register() {
 		try {
-			String sql = "Insert into users values (?,?,?,?,?,?)";
-			Date date = new Date();
+			String sql = "Select * from users where email=?";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, name);
-			pstmt.setString(2, email);
-			pstmt.setString(3, un);
-			pstmt.setString(4, pwd);
-			pstmt.setLong(5, date.getTime());
-			pstmt.setInt(6, 0);
-			return pstmt.executeUpdate();
+			pstmt.setString(1, email);
+			ResultSet res = pstmt.executeQuery();
+			if (res.next()) {
+				setEmail(res.getString("email"));
+				return -1;
+			}
+			else {
+				sql = "Insert into users values (?,?,?,?,?,?)";
+				Date date = new Date();
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1, name);
+				pstmt.setString(2, email);
+				pstmt.setString(3, un);
+				pstmt.setString(4, pwd);
+				pstmt.setLong(5, date.getTime());
+				pstmt.setInt(6, 0);
+				return pstmt.executeUpdate();
+			}
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -164,18 +174,17 @@ public class Model {
 	
 	public int changePwd() {
 		try {
-			String sql1 = "Select * from users where username=? AND password=?";
+			String sql1 = "Select * from users where email=? AND password=?";
 			pstmt = con.prepareStatement(sql1);
-			pstmt.setString(1, un);
+			pstmt.setString(1, email);
 			pstmt.setString(2, pwd);
 			res = pstmt.executeQuery();
-			if (res.next() == true) {
-				String sql2 = "UPDATE USERS SET PASSWORD=? WHERE USERNAME=?";
+			if (res.next()) {
+				String sql2 = "UPDATE USERS SET PASSWORD=? WHERE EMAIL=?";
 				pstmt = con.prepareStatement(sql2);
 				pstmt.setString(1, newpwd);
-				pstmt.setString(2, un);
-				int x = pstmt.executeUpdate();
-				return x;
+				pstmt.setString(2, email);
+				return pstmt.executeUpdate();
 			}
 			else {
 				return 0;
@@ -190,23 +199,21 @@ public class Model {
 	
 	public int modifyBalance(int amount, int plusMinus) {
 		try {
-			String sql1 = "Select * from users where username=? AND password=?";
+			String sql1 = "Select * from users where email=? AND password=?";
 			pstmt = con.prepareStatement(sql1);
-			pstmt.setString(1, un);
+			pstmt.setString(1, email);
 			pstmt.setString(2, pwd);
 			res = pstmt.executeQuery();
-			//System.out.print(res.next());
-			if (res.next() == true) {
+			if (res.next()) {
 				if (plusMinus == -1) {
 					if (res.getInt("balance") < amount) {
 						return -1;
 					}
 				}
-				String sql2 = "UPDATE users SET balance=? WHERE username=? AND password=?";
+				String sql2 = "UPDATE users SET balance=? WHERE email=?";
 				pstmt = con.prepareStatement(sql2);
 				pstmt.setInt(1, balance + amount * plusMinus);
-				pstmt.setString(2, un);
-				pstmt.setString(3, pwd);
+				pstmt.setString(2, email);
 				int x = pstmt.executeUpdate();
 				setBalance(balance + amount * plusMinus);
 				return x;
@@ -223,21 +230,21 @@ public class Model {
 	
 	public int transfer(int transfer, String racno) {
 		try {
-			String sql1 = "Select * from users where username=? AND password=?";
+			String sql1 = "Select * from users where email=? AND password=?";
 			pstmt = con.prepareStatement(sql1);
-			pstmt.setString(1, un);
+			pstmt.setString(1, email);
 			pstmt.setString(2, pwd);
 			res = pstmt.executeQuery();
-			if (res.next() == true) {
+			if (res.next()) {
 				if (res.getInt("balance") < transfer) {
 					return -1;
 				}
 				else {
-					String sendSql = "UPDATE users SET balance=? WHERE username=? AND password=?";
+					String sendSql = "UPDATE users SET balance=? WHERE email=? AND password=?";
 					pstmt = con.prepareStatement(sendSql);
 					System.out.printf("%d, %d\n", balance, transfer);
 					pstmt.setInt(1, balance - transfer);
-					pstmt.setString(2, un);
+					pstmt.setString(2, email);
 					pstmt.setString(3, pwd);
 					int x = pstmt.executeUpdate();
 					setBalance(balance - transfer);

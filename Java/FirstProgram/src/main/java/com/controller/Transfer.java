@@ -27,10 +27,10 @@ public class Transfer extends HttpServlet {
 		
 		Model m = new Model();
 		HttpSession session = req.getSession(true);
-		String un = (String) session.getAttribute("un");
+		String email = (String) session.getAttribute("email");
 		String pwd = (String) session.getAttribute("pwd");
 		int balance = (int) session.getAttribute("balance");
-		m.setUn(un);
+		m.setEmail(email);
 		m.setPwd(pwd);
 		m.setBalance(balance);
 		

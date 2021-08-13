@@ -8,7 +8,7 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<%out.println("password changed successfully");%>
+<%out.println("Password changed successfully");%>
 <br><br>Click <a href="changePwd.html">here</a> to change your password.
 <br><br>Click <a href="checkBalance.jsp">here</a> to check your balance.
 <br><br>Click <a href="LogOut">here</a> to log out.

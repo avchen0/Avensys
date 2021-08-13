@@ -51,12 +51,17 @@ public class Register extends HttpServlet {
 				m.sendEmail(m.getEmail(), Credentials.email, Credentials.pwd, msg);
 				resp.sendRedirect("/FirstProgram/successReg.html");
 			}
+			else if (rowsUpdated == -1){
+				HttpSession session = req.getSession(true);
+				session.setAttribute("email", m.getEmail());
+				resp.sendRedirect("/FirstProgram/accExists.jsp");
+			}
 			else {
 				resp.sendRedirect("/FirstProgram/didNotReg.html");
 			}
 		}
 		else {
-			resp.sendRedirect("/MyApp/wrongReg.html");
+			resp.sendRedirect("/FirstProgram/wrongReg.html");
 		}
 		
 		/*
