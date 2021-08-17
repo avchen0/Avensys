@@ -7,3 +7,4 @@ Java Assignments:
 
 Web Assignments:
 - Multi Page Website: ./Web/multi_page_website/index.html
+- Bootstrap Website: ./Web/bootstrapWebsite/index.html
